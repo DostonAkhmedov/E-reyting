@@ -27,7 +27,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'direction_id'); ?>
-		<?php echo $form->textField($model,'direction_id'); ?>
+		<?php echo $form->dropDownList($model,'direction_id',Direction::getDirections()); ?>
 		<?php echo $form->error($model,'direction_id'); ?>
 	</div>
 

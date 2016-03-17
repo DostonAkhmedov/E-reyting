@@ -86,6 +86,10 @@ class Faculty extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+	public static function getFaculty(){
+		$models=self::model()->findAll();
+		return CHtml::listData($models,'id','name');
+	}
 
 	/**
 	 * Returns the static model of the specified AR class.

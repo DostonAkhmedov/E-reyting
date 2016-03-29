@@ -23,9 +23,18 @@ $this->menu=array(
 	'attributes'=>array(
 		'id',
 		'name',
-		'group_id',
-		'subject_id',
-		'type_of_control_id',
+		'group_id'=>[
+			'name'=>'group_id',
+			'value'=>$model->group->name,
+		],
+		'subject_id'=>[
+			'name'=>'subject_id',
+			'value'=>$model->subject->name,
+		],
+		'type_of_control_id'=>[
+			'name'=>'type_of_control_id',
+			'value'=>$model->typeOfControl->name,
+		],
 		'ball',
 		'total_ball',
 	),

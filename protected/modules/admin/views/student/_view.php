@@ -14,15 +14,15 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('group_id')); ?>:</b>
-	<?php echo CHtml::encode($data->group_id); ?>
+	<?php echo CHtml::encode($data->group->name); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('subject_id')); ?>:</b>
-	<?php echo CHtml::encode($data->subject_id); ?>
+	<?php echo CHtml::encode($data->subject->name); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('type_of_control_id')); ?>:</b>
-	<?php echo CHtml::encode($data->type_of_control_id); ?>
+	<?php echo CHtml::encode($data->typeOfControl->name); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('ball')); ?>:</b>

@@ -23,6 +23,9 @@ $this->menu=array(
 	'attributes'=>array(
 		'id',
 		'name',
-		'direction_id',
+		'direction_id'=>[
+			'name'=>'direction_id',
+			'value'=>$model->direction->name,
+		],
 	),
 )); ?>

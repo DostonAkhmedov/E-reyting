@@ -23,7 +23,7 @@
 
 	<div class="row">
 		<?php echo $form->label($model,'direction_id'); ?>
-		<?php echo $form->textField($model,'direction_id'); ?>
+		<?php echo $form->dropDownList($model,'direction_id',Direction::getDirections() ); ?>
 	</div>
 
 	<div class="row buttons">

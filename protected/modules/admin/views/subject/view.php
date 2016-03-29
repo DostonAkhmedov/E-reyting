@@ -23,6 +23,9 @@ $this->menu=array(
 	'attributes'=>array(
 		'id',
 		'name',
-		'teacher_id',
+		'teacher_id'=>[
+			'name'=>'teacher_id',
+			'value'=>$model->teacher->name,
+		],
 	),
 )); ?>

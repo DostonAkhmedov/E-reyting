@@ -47,6 +47,7 @@ class Teacher extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'subjects' => array(self::HAS_MANY, 'Subject', 'teacher_id'),
+			'department' => array(self::BELONGS_TO, 'Department', 'department_id'),
 		);
 	}
 

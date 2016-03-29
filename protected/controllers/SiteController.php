@@ -5,6 +5,7 @@ class SiteController extends Controller
     /**
      * Declares class-based actions.
      */
+
     public function actions()
     {
         return array(
@@ -90,16 +91,16 @@ class SiteController extends Controller
                 if (Yii::app()->user->name == "admin") Yii::app()->user->returnUrl = Yii::app()->baseUrl . '/index.php/admin';
                 $this->redirect(Yii::app()->user->returnUrl);
             }
+        }
             // display the login form
             $this->render('login', array('model' => $model));
         }
-    }
+
 
     /**
      * Logs out the current user and redirect to homepage.
      */
-    public
-    function actionLogout()
+    public function actionLogout()
     {
         Yii::app()->user->logout();
         $this->redirect(Yii::app()->homeUrl);

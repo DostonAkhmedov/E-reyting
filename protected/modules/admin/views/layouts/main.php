@@ -37,7 +37,8 @@
 				array('label'=>'Student', 'url'=>array('student/index')),
 				array('label'=>'Subject', 'url'=>array('subject/index')),
 				array('label'=>'Teacher', 'url'=>array('teacher/index')),
-				array('label'=>'Type of control', 'url'=>array('TypeOfControl/index')),
+				array('label'=>'Type of subject', 'url'=>array('typeOfSubject/index')),
+				array('label'=>'Subject Teacher', 'url'=>array('subjectTeacher/index')),
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),

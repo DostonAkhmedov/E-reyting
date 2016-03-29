@@ -86,7 +86,10 @@ class Faculty extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
-
+	public static function getFaculties(){
+		$model=self::model()->findAll();
+		return CHtml::listData($model,'id','name');
+	}
 	/**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!

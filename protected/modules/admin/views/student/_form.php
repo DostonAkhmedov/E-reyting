@@ -27,19 +27,19 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'group_id'); ?>
-		<?php echo $form->textField($model,'group_id'); ?>
+		<?php echo $form->dropDownList($model,'group_id',Group::getGroups()); ?>
 		<?php echo $form->error($model,'group_id'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'subject_id'); ?>
-		<?php echo $form->textField($model,'subject_id'); ?>
+		<?php echo $form->dropDownList($model,'subject_id',Subject::getSubjects()); ?>
 		<?php echo $form->error($model,'subject_id'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'type_of_control_id'); ?>
-		<?php echo $form->textField($model,'type_of_control_id'); ?>
+		<?php echo $form->dropDownList($model,'type_of_control_id',TypeOfControl::getTypeOfControls()); ?>
 		<?php echo $form->error($model,'type_of_control_id'); ?>
 	</div>
 

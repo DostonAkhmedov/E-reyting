@@ -84,10 +84,9 @@ class TypeOfControl extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
-
-	public static function getTypeOfControl(){
-		$models=self::model()->findAll();
-		return CHtml::listData($models,'id','name');
+	public static function getTypeOfControls(){
+		$model=self::model()->findAll();
+		return CHtml::listData($model,'id','name');
 	}
 	/**
 	 * Returns the static model of the specified AR class.

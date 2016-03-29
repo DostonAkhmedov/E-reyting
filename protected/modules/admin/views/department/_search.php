@@ -23,7 +23,7 @@
 
 	<div class="row">
 		<?php echo $form->label($model,'faculty_id'); ?>
-		<?php echo $form->textField($model,'faculty_id'); ?>
+		<?php echo $form->dropDownList($model,'faculty_id',Faculty::getFaculties()); ?>
 	</div>
 
 	<div class="row buttons">

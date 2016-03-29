@@ -62,8 +62,6 @@ class Teacher extends CActiveRecord
 		);
 	}
 
-
-
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
 	 *
@@ -90,10 +88,9 @@ class Teacher extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
-
-	public static function getTeacher(){
-		$models=self::model()->findAll();
-		return CHtml::listData($models,'id','name');
+	public static function getTeachers(){
+		$model=self::model()->findAll();
+		return CHtml::listData($model,'id','name');
 	}
 	/**
 	 * Returns the static model of the specified AR class.

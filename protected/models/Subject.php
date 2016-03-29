@@ -90,10 +90,9 @@ class Subject extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
-
 	public static function getSubjects(){
-		$models=self::model()->findAll();
-		return CHtml::listData($models,'id','name');
+		$model=self::model()->findAll();
+		return CHtml::listData($model,'id','name');
 	}
 	/**
 	 * Returns the static model of the specified AR class.

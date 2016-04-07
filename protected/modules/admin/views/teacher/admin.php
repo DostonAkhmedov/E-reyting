@@ -53,6 +53,9 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'department_id'=>['name'=>'department_id',
 			'value'=>'$data->department->name',
 			'filter'=>Department::getDepartments(),],
+		'login',
+		'parol',
+		'role',
 		array(
 			'class'=>'CButtonColumn',
 		),

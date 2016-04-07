@@ -7,9 +7,13 @@
  * @property integer $id
  * @property string $name
  * @property integer $department_id
+ * @property string $login
+ * @property string $parol
+ * @property integer $role
  *
  * The followings are the available model relations:
  * @property Subject[] $subjects
+ * @property SubjectTeacher[] $subjectTeachers
  */
 class Teacher extends CActiveRecord
 {
@@ -29,12 +33,12 @@ class Teacher extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name, department_id', 'required'),
-			array('department_id', 'numerical', 'integerOnly'=>true),
-			array('name', 'length', 'max'=>50),
+			array('name, department_id, login, parol', 'required'),
+			array('department_id, role', 'numerical', 'integerOnly'=>true),
+			array('name, login, parol', 'length', 'max'=>50),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, name, department_id', 'safe', 'on'=>'search'),
+			array('id, name, department_id, login, parol, role', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -47,6 +51,7 @@ class Teacher extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'subjects' => array(self::HAS_MANY, 'Subject', 'teacher_id'),
+			'subjectTeachers' => array(self::HAS_MANY, 'SubjectTeacher', 'teacher_id'),
 			'department' => array(self::BELONGS_TO, 'Department', 'department_id'),
 		);
 	}
@@ -60,6 +65,9 @@ class Teacher extends CActiveRecord
 			'id' => 'ID',
 			'name' => 'Name',
 			'department_id' => 'Department',
+			'login' => 'Login',
+			'parol' => 'Parol',
+			'role' => 'Role',
 		);
 	}
 
@@ -84,6 +92,9 @@ class Teacher extends CActiveRecord
 		$criteria->compare('id',$this->id);
 		$criteria->compare('name',$this->name,true);
 		$criteria->compare('department_id',$this->department_id);
+		$criteria->compare('login',$this->login,true);
+		$criteria->compare('parol',$this->parol,true);
+		$criteria->compare('role',$this->role);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

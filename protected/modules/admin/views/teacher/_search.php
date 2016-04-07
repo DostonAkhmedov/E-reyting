@@ -26,6 +26,16 @@
 		<?php echo $form->dropDownList($model,'department_id',Department::getDepartments()); ?>
 	</div>
 
+	<div class="row">
+		<?php echo $form->label($model,'login'); ?>
+		<?php echo $form->textField($model,'login',array('size'=>50,'maxlength'=>50)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'parol'); ?>
+		<?php echo $form->textField($model,'parol',array('size'=>50,'maxlength'=>50)); ?>
+	</div>
+
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Search'); ?>
 	</div>

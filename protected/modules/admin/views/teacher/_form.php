@@ -31,6 +31,19 @@
 		<?php echo $form->error($model,'department_id'); ?>
 	</div>
 
+	<div class="row">
+		<?php echo $form->labelEx($model,'login'); ?>
+		<?php echo $form->textField($model,'login',array('size'=>50,'maxlength'=>50)); ?>
+		<?php echo $form->error($model,'login'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'parol'); ?>
+		<?php echo $form->textField($model,'parol',array('size'=>50,'maxlength'=>50)); ?>
+		<?php echo $form->error($model,'parol'); ?>
+	</div>
+
+
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>

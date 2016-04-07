@@ -16,25 +16,25 @@ return array(
         'type' => CAuthItem::TYPE_ROLE,
         'description' => 'User',
         'children' => array(
-            'guest', // унаследуемся от гостя
+            'guest', // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
         ),
         'bizRule' => null,
         'data' => null
     ),
-    'moderator' => array(
+    '1' => array(
         'type' => CAuthItem::TYPE_ROLE,
-        'description' => 'Moderator',
+        'description' => 'Teacher',
         'children' => array(
-            'user',          // позволим модератору всё, что позволено пользователю
+            'user',          // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ, пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         ),
         'bizRule' => null,
         'data' => null
     ),
     '0' => array(
         'type' => CAuthItem::TYPE_ROLE,
-        'description' => 'Administrator',
+        'description' => 'Admin',
         'children' => array(
-            'moderator',         // позволим админу всё, что позволено модератору
+            'teacher',         // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ, пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         ),
         'bizRule' => null,
         'data' => null
